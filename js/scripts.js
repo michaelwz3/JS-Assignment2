@@ -33,7 +33,7 @@ function changeRandomColor() {
 
 function changeColor(colorId) {
   // Returns color based on what number is chosen
-  if (colorId >= 0 && colorId <= 21) {
+  if (colorId >= 0 && colorId <= 20) {
     return "green";
   } else if (colorId >= 21 && colorId <= 40) {
     return "blue";
