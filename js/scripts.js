@@ -18,21 +18,15 @@ const imageList = [
 function changeCustomColor() {
   // colorId is equal to the value of the input field
   let colorId = customNumberInput.value;
-  // checks if input is valid
-  if (colorId < 0 || colorId > 100 || colorId === "") {
-    alert("Please enter a number between 0 and 100");
-    return;
-    // If valid, changes background color based on number input and makes student id visible
-  } else {
-    studentId.style.visibility = "visible";
-    pageBg.style.backgroundColor = changeColor(colorId);
-  }
+  studentId.style.visibility = "visible";
+  // Changes background color based on number entered
+  pageBg.style.backgroundColor = changeColor(colorId);
 }
 
 // function to change bg color from random no.
 function changeRandomColor() {
-  // Generates random number between 0 and 100
-  let colorId = Math.floor(Math.random() * 101);
+  // Generates random number between 1 and 100
+  let colorId = Math.floor(Math.random() * 100) + 1;
   // Changes background color based on number generated
   pageBg.style.backgroundColor = changeColor(colorId);
 }
@@ -49,6 +43,8 @@ function changeColor(colorId) {
     return "purple";
   } else if (colorId >= 81 && colorId <= 100) {
     return "yellow";
+  } else {
+    return "red";
   }
 }
 // function to generate options for select list
