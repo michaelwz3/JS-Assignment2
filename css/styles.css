@@ -1,0 +1,25 @@
+html {
+  /* Set up the font and color for the page */
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+  margin-top: 10%;
+}
+
+p:first-of-type {
+  /* Make student number stand out*/
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  visibility: hidden;
+}
+
+img {
+  /* Start off hidden and format so each image is the same size.*/
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+}
